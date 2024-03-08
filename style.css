@@ -1,0 +1,22 @@
+nav img {
+    width: 140px;
+}
+
+header .navbar {
+    background-color: black; /* This sets the background color to black */
+}
+
+
+.nav-link{
+    font-size: 20px !important;
+}
+
+.carousel-indicators{
+    background-color: black;
+    border-radius: 100px;
+}
+
+.preto{
+    height: 70px;
+    background-color: black ;
+}
