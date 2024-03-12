@@ -5,113 +5,368 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock in Rio - Informações oficiais</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="bg-black text-white">
     <header>
-        <nav class="navbar navbar-dark bg-black">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img
-                        src="https://cdn.rockinrio.com/wp-content/uploads/2023/10/rockinrio-logo-horizontal-40anos-1.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-
-                    <div class="offcanvas-body">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                        <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item d-flex justify-content-center">
-                                <a class="nav-link active" aria-current="page" href="#">Line-up</a>
-                            </li>
-                            <hr style="color:white">
-                            <li class="nav-item d-flex justify-content-center">
-                                <a class="nav-link active" aria-current="page" href="#">Informações</a>
-                            </li>
-                            <hr style="color:white">
-                            <li class="nav-item d-flex justify-content-center">
-                                <a class="nav-link active" aria-current="page" href="#">Loja Oficial</a>
-                            </li>
-                            <hr style="color:white">
-                            <li class="nav-item d-flex justify-content-center">
-                                <a class="nav-link active" aria-current="page" href="#">Novidades</a>
-                            </li>
-                            <hr style="color:white">
-                            <li class="nav-item d-flex justify-content-center">
-                                <a class="nav-link active" aria-current="page" href="#">Explore</a>
-                            </li>
-                            <hr style="color:white">
-                        </ul>
-                    </div>
+        <div>
+            <nav class="navbar navbar-dark bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/index.html"> <img
+                            src="https://cdn.rockinrio.com/wp-content/uploads/2023/10/rockinrio-logo-horizontal-40anos-1.png"></a>
+                    <button class="navbar-toggler" id="menu" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-            </div>
-        </nav>
+                <div class="menuPC" id="menuPC">
+                    <a href="informacoes.html">
+                        <li>INFORMACOES</li>
+                    </a>
+                    <a href="lineup.html">
+                        <li>LINE-UP</li>
+                    </a>
+                    <a href="">
+                        <li>LOJA OFICIAL</li>
+                    </a>
+                </div>
     </header>
+
+    <div class="offcanvas offcanvas-end text-bg-dark bg-black" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+
+        <div class="offcanvas-body">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3 bg-black">
+                <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link active" aria-current="page" href="lineup.html">Line-up</a>
+                </li>
+                <hr style="color:white">
+                <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link active" aria-current="page" href="informacoes.html">Informações</a>
+                </li>
+                <hr style="color:white">
+                <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link active" aria-current="page" href="#">Loja Oficial</a>
+                </li>
+                <hr style="color:white">
+            </ul>
+        </div>
+    </div>
 
 
 
     <main>
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
+                <div class="preto">
+                    <button type="button" id="b1" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" id="b2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
             </div>
-            
+
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anunciotravisscott-2902-ag-mobile-v1-2-650x650.png"
-                        class="d-block w-100">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2500">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anunciotravisscott-2902-ag-mobile-v1-2-650x650.png"
+                            srcset="https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anunciotravisscott-2902-ag-desktop-v1-2-1920x650.png,
+                                     https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anunciotravisscott-2902-ag-mobile-v1-2-650x650.png 650w"
+                            sizes="(min-width: 768px)" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anuncio7-0703-ag-v1-mobile-650x650.png"
+                            srcset="https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anuncio6-2902-ag-v4-desktop-1920x650.png,
+                                     https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anuncio7-0703-ag-v1-mobile-650x650.png 650w"
+                            sizes="(min-width: 768px)" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/template-mobile-650x650.jpg"
+                            srcset="https://cdn.rockinrio.com/wp-content/uploads/2023/11/template-desk-1920x650.jpg,
+                                     https://cdn.rockinrio.com/wp-content/uploads/2023/11/template-mobile-650x650.jpg 650w"
+                            sizes="(min-width: 768px)" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2022/09/rir-banner-site-mobile-club-vendas-abertas-0501-bc-2-650x650.jpg"
+                            srcset="https://cdn.rockinrio.com/wp-content/uploads/2022/09/rir-banner-site-desktop-club-vendas-abertas-0501-bc-2-1920x650.jpg,
+                                     https://cdn.rockinrio.com/wp-content/uploads/2022/09/rir-banner-site-mobile-club-vendas-abertas-0501-bc-2-650x650.jpg 650w"
+                            sizes="(min-width: 768px)" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-guide-mobile-2.jpg"
+                            srcset="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-guide-desktop-2.jpg,
+                                     https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-guide-mobile-2.jpg 650w"
+                            sizes="(min-width: 768px)" class="d-block w-100">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.rockinrio.com/wp-content/uploads/2024/02/home-banner-anuncio7-0703-ag-v1-mobile-650x650.png"
-                        class="d-block w-100">
+
+            </div>
+
+
+
+        </div>
+
+
+        <section class="seta">
+            <i class="fas fa-chevron-down"></i>
+        </section>
+
+        <div class="noticias" id="noticias">
+            <img style="margin-left: 10px;" src="//cdn.rockinrio.com/wp-content/uploads/2024/01/template-mobile-v2.jpg"
+                alt="">
+            <img style="margin-left: 10px;"
+                src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-materia-global-village-mobile.jpg"
+                alt="">
+            <img style="margin-left: 10px;"
+                src="https://cdn.rockinrio.com/wp-content/uploads/2023/10/tt-site-guide-mobile-1.jpg" alt="">
+            <img style="margin-left: 10px;"
+                src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-guide-mobile-1.jpg" alt="">
+        </div>
+
+        <div id="carroselCELULA">
+            <div id="carouselExampleCaptions" class="carousel slide noticias">
+
+                <div class="carousel-indicators" id="btnNoticias">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" id="slide_selector"
+                        data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" id="slide_selector"
+                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" id="slide_selector"
+                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" id="slide_selector"
+                        data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/template-mobile-650x650.jpg"
-                        class="d-block w-100">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2024/01/template-mobile-v2.jpg"
+                            class="d-block w-100" alt="">
+                        <div class="carousel-caption d-block  text-start d-md-block text">
+                            <hr class="hrNot">
+                            <h5 class="text-white">LINE-UP: veja as primeiras datas e palcos já confirmados</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-materia-global-village-mobile.jpg"
+                            class="d-block w-100" alt="">
+                        <div class="carousel-caption d-block text-start d-md-block">
+                            <hr class="hrNot">
+                            <h5 class="text-white">Global Village, a nova área da Cidade do Rock</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/10/tt-site-guide-mobile-1.jpg"
+                            class="d-block w-100" alt="">
+                        <div class="carousel-caption d-block text-start d-md-block">
+                            <hr class="hrNot">
+                            <h5 class="text-white">Rock in Rio 2024: O Palco dos Grandes Encontros!</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-guide-mobile-1.jpg"
+                            class="d-block w-100" alt="">
+                        <div class="carousel-caption d-block text-start d-md-block">
+                            <hr class="hrNot">
+                            <h5 class="text-white">Todas as histórias que vivemos nesses 40 anos em um só lugar!</h5>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.rockinrio.com/wp-content/uploads/2022/09/rir-banner-site-mobile-club-vendas-abertas-0501-bc-2-650x650.jpg"
-                        class="d-block w-100">
+
+
+            </div>
+        </div>
+
+        <section class="getlimits">
+            <div class="TodasNoticias">
+                <p>TODAS AS NOTÍCIAS</p>
+                <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/icon-frase.png" class="aspas"
+                    alt="">
+
+                <h1>“Percebi que as armas que tenho para conseguir tornar o mundo um pouco melhor são a música e o
+                    festival.
+                    É o que eu sei fazer bem.”</h1>
+
+                <hr class="poema">
+            </div>
+
+            <div class="fundador">
+                <h2>ROBERTO MEDINA</h1>
+                    <span>2001 - FUNDADOR</span>
+            </div>
+
+            <hr>
+
+            <div class="novidades">
+                <h1>Receba as novidades em primeira mão</h1>
+
+                <form id="form-rockinrio">
+                    <div>
+                        <input type="text" id="nome" name="nome" placeholder="Nome *" required>
+                        <input type="email" id="email" name="email" placeholder="Email * " required>
+                        <input type="text" id="mensagem" placeholder="O que você gostaria de ver no Rock in Rio? "
+                            name="mensagem">
+                        <div class="form-group">
+                            <input type="checkbox" id="politica" name="politica" required>
+                            <label for="politica">Li e aceito política de privacidade da Rock World SA. *</label>
+                        </div>
+                    </div>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+
+
+            <div class="patrocionio">
+                <div class="master">
+                    <h6>Patrocinador Master</h6>
+                    <img src="https://cdn.rockinrio.com/wp-content/uploads/2021/01/itau-10.png" alt="">
                 </div>
-                <div class="carousel-item">
-                    <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/11/tt-site-guide-mobile-2.jpg"
-                        class="d-block w-100">
+
+                <div class="institucionais">
+                    <h6>Patrocinador Institucional</h6>
+                    <div>
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/09/barra-logos-rock-2024-2-07.jpg"
+                            alt="">
+                        <img src="https://cdn.rockinrio.com/wp-content/uploads/2023/09/barra-logos-rock-2024-2-08.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="patrocinadores">
+                    <h6>Patrocinadores</h6>
+                    <div class="imgs">
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/hnk.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/ipiranga-2.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/doritos-master.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/prudential.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/tim.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/ca.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/wolksvagem-branca.png"
+                                alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/coca-cola-1.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2020/02/natura-2.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2021/06/seara-76pxs.png" alt="">
+                        </div>
+                        <div class="imagem">
+                            <img src="https://cdn.rockinrio.com/wp-content/uploads/2021/06/kitkat.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/logo_rio_footer-pt-br.png"
+                    width="60%" alt="" class="rockinrioimagem">
+
+
+
+
+                <div class="redes">
+                    <a class="icones" target="_blank" href="http://instagram.com/rockinrio/" id="instagram">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-in.png"
+                            alt="instagram">
+                    </a>
+
+                    <a class="icones" target="_blank" href="https://www.tiktok.com/@rockinrio" id="tiktok">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-tt.png"
+                            alt="tiktok">
+                    </a>
+
+                    <a class="icones" target="_blank" href="https://twitter.com/rockinrio" id="twitter">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-x.png"
+                            alt="twitter">
+                    </a>
+
+                    <a class="icones" target="_blank" href="https://open.spotify.com/user/rockinriooficial"
+                        id="spotify">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-sp.png"
+                            alt="spotify">
+                    </a>
+
+
+                    <a class="icones" target="_blank" href="https://br.linkedin.com/company/rockinrio" id="linkedin">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-ln.png"
+                            alt="linkedin">
+                    </a>
+
+
+                    <a class="icones" target="_blank" href="https://www.facebook.com/rockinrio" id="facebook">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-fb.png"
+                            alt="facebook" class="face">
+                    </a>
+
+
+                    <a class="icones" target="_blank" href="http://www.youtube.com/rockinrio" id="youtube">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-yt.png"
+                            alt="youtube">
+                    </a>
+
+
+                    <a class="icones" target="_blank" href="https://www.flickr.com/people/rockinrio/" id="flickr">
+                        <img src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/redes-sociais/new-fl.png"
+                            alt="flickr">
+                    </a>
+
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+        </section>
+
 
 
     </main>
+
+    <footer>
+        <div class="rodape">
+            <img class="apcer" src="https://cdn.rockinrio.com/wp-content/themes/rir2/assets/images/apcer.png" alt="">
+            <img class="artplan"
+                src="https://rockinrio.com/assets/logos/artplan-abef9607ad87ac1a9a69fe218871a262d716b9af56ecc743e4a0437668c18d32.png"
+                alt="">
+        </div>
+    </footer>
 </body>
 
 </html>

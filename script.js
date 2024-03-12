@@ -1,18 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var menu = document.getElementById('menu');
-    var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-    var collapseList = collapseElementList.map(function (collapseEl) {
-      return new bootstrap.Collapse(collapseEl, {
-        toggle: false
-      })
-    });
-  
-    menu.addEventListener('show.bs.collapse', function () {
-      menu.style.display = 'block';
-    });
-  
-    menu.addEventListener('hidden.bs.collapse', function () {
-      menu.style.display = '';
-    });
-  });
-  
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    let getLimits = {
+        altura: innerHeight,
+        largura: innerWidth
+    }
+
+    /*sumir coisas feitas para o mobile*/
+    if (getLimits.largura >= 768) {
+        sumir('menu')
+        sumir('carroselCELULA')
+    }
+
+
+    /*sumir coisas feitas para o pc*/
+    if (getLimits.largura < 768) {
+        sumir('menuPC')
+        sumir('noticias')
+        sumir('')
+    }
+
+
+    function sumir(id){
+        var elem = document.getElementById(id);
+        if (elem) { // Verifica se o elemento existe antes de tentar alterar o estilo
+            elem.style.display = 'none';
+        }
+    }
+
+    function aparecer(id){
+        var elem = document.getElementById(id);
+        if (elem) { // Verifica se o elemento existe antes de tentar alterar o estilo
+            elem.style.display = 'block';
+        }
+    }
+})
+
+
+
+

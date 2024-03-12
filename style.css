@@ -1,22 +1,774 @@
+@font-face {
+    font-family: 'Interstate Thin';
+    src: url('./fontes/interstate-thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Interstate';
+    src: url('./fontes//interstate.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Interstate Bold';
+    src: url('./fontes//interstate-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Interstate Black';
+    src: url('./fontes//interstate-black-cond.otf') format('truetype');
+}
+
+
+body{
+    overflow-x: hidden;
+}
 nav img {
     width: 140px;
 }
 
+header {
+    width: 100%;
+}
+
 header .navbar {
-    background-color: black; /* This sets the background color to black */
+    background-color: black;
+    padding: 0px;
+    padding-top: 10px;
 }
 
 
-.nav-link{
+.nav-link {
     font-size: 20px !important;
 }
 
-.carousel-indicators{
+.carousel-indicators {
+    margin: -.5px !important;
+    height: 30px;
+}
+
+.preto {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.carousel-indicators .active {
+    background-color: red !important;
+
+}
+
+#b1 {
+    margin-left: 20px;
+}
+
+#b2 {
+    margin-right: 20px;
+}
+
+.carousel-indicators button {
+    width: 45px !important;
+    height: 6px !important;
+    border-radius: 150px !important;
+    transition: none !important;
+    border: none !important;
+
+}
+
+.carousel-indicators button::before {
+    font-size: 1.5em;
+}
+
+.fa-chevron-down {
+    opacity: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.seta {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.noticias {
+    margin-top: 15px;
+}
+
+#slide_selector {
+    width: 13px !important;
+    height: 13px !important;
+    margin: 5px !important;
+}
+
+#btnNoticias .active {
+    background-color: #ff5629 !important;
+}
+
+#btnNoticias button {
+    background-color: #c22900 !important;
+}
+
+.carousel-caption {
+    width: auto;
+}
+
+.hrNot {
+    border-bottom: 1.5px solid;
+    color: #ff5629;
+    width: 80px;
+    opacity: 1;
+}
+
+.TodasNoticias p {
+    width: 193px;
+    height: 41.5px;
+    background-color: #ff5629;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.8em;
+
+
+}
+
+.TodasNoticias p:hover {
+    transition: 0.4s;
+    background-color: #c22900;
+    cursor: pointer
+}
+
+.TodasNoticias {
+    margin-top: 40px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TodasNoticias img {
+    margin-top: 70px;
+}
+
+.TodasNoticias h1 {
+    font-family: "Source Sans Pro" Light, sans-serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    width: 80%;
+    margin: 20px;
+}
+
+.aspas {
+    width: 35px;
+    height: 27px;
+}
+
+.poema {
+    border-bottom: 5px solid;
+    color: #c22900;
+    width: 70px;
+    opacity: 1;
+    margin-bottom: 25px;
+}
+
+.fundador {
+    width: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+
+.fundador span {
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    color: #c22900;
+}
+
+.novidades {
+    width: 100%;
+}
+
+.novidades h1 {
+    font-family: "Source Sans Pro" Light, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+}
+
+#form-rockinrio {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.form-group label {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+#form-rockinrio input {
+    margin-bottom: 10px;
+}
+
+#form-rockinrio input[type="text"],
+input[type="email"] {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Para garantir que o padding não aumente a largura */
+    height: 35px;
+}
+
+#form-rockinrio button {
+    background: #337ab7;
+    color: white;
+    height: 39px;
+    border: none;
+    border-radius: 100px;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+
+.patrocionio {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.master img {
+    margin-bottom: 25px;
+}
+
+.master {
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patrocionio h6 {
+    font-size: 11px;
+}
+
+.institucionais {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+button:hover {
+    opacity: 0.9;
+}
+
+.getlimits {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.patrocinadores {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.patrocinadores .imagem img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.patrocinadores .imagem {
+    width: calc(30% + 5px);
+    margin: 5px;
+}
+
+.imgs {
+    display: flex;
+    /* Utiliza flexbox para alinhamento */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.dropdown {
+    margin-top: 20px;
+}
+
+.btn {
+    --bs-btn-font-weight: 800 !important;
+}
+
+.btn::after {
+    display: none !important;
+}
+
+
+.icones {
+    width: 100px;
+    height: 50px;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
     border-radius: 100px;
 }
 
-.preto{
-    height: 70px;
-    background-color: black ;
+.icones img {
+    width: 35%;
 }
+
+.face {
+    width: 15% !important;
+    height: 70%;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {
+    background-color: #1a1a1a;
+}
+
+.rodape {
+    background-color: #1a1a1a;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.apcer {
+    padding: 50px;
+    padding-left: 10px;
+}
+
+.artplan {
+    width: 8%;
+    height: 8%;
+    margin: 30px;
+    align-self: flex-start;
+}
+
+
+
+
+
+
+
+/* PÁGINA LINE-UP */
+
+
+
+
+
+
+
+
+.lineup {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Interstate Thin';
+}
+
+.bloco-dias {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag-dia {
+    font-family: 'Interstate';
+    color: white !important;
+    text-decoration: none !important;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 1.3rem;
+    height: 39px
+}
+
+
+.tag-dia.active {
+    color: black !important;
+    background-color: white;
+}
+
+
+.artistas {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    opacity: 0.75;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 50px;
+}
+
+.artistas h5 {
+    opacity: 0.45;
+    font-size: .9em;
+    color: #fff;
+    font-family: 'Interstate Bold';
+}
+
+.artistas h6 {
+    opacity: 0.45;
+    margin-bottom: 50px;
+    font-size: .9em;
+    color: #fff;
+    font-family: 'Interstate Bold';
+}
+
+.artistas h1 {
+    font-size: 4em;
+    line-height: 50px;
+    font-family: 'Interstate Black';
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.artistas h2 {
+    padding: 30px;
+    margin-top: 40px;
+    font-size: 2.8em;
+    line-height: 38px;
+    font-family: 'Interstate Black';
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.menorzin {
+    margin: 10px !important;
+    padding: 10px !important;
+}
+
+
+
+/* página informações */
+
+
+
+
+
+
+
+
+.fundoinformações {
+    background-image: url('https://cdn.rockinrio.com/wp-content/uploads/2023/11/site-rock-photo-bg-informacoes.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.fundoinformações h1{
+    font-family: 'Interstate Black';
+    font-style: italic;
+    font-size: 2.3em;
+    margin-top:200px ;
+}
+
+.ngmvaikk{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Interstate Thin';
+    color: #ff5629;
+}
+
+.ngmvaikk h1{
+    font-size: 2.4rem;
+}
+
+.ngmvaikk hr {
+    border: none; 
+    background-color: #ff5629; 
+    height: 4px; 
+    width: 50px; 
+    margin: 8px auto; 
+    opacity: 1;
+}
+
+.ngmvaikk img{
+    width: 90%;
+    margin: 40px;
+    border: white solid 8px ;
+}
+
+.ngmvaikk h2{
+    font-family: 'Interstate Black';
+    font-style: italic;
+    font-size: 32px;
+}
+  
+.ngmvaikk p{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: 'Interstate thin';
+    font-style: italic;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+}
+
+.CVC{
+    margin-top: 25px;
+    background-image: url("https://cdn.rockinrio.com/wp-content/uploads/2021/09/microsoftteams-image-6.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CVC h1{
+    color: white;
+    font-family: 'Interstate';
+    padding-top: 40px;
+    padding-bottom:30px;
+    font-size: 32px;
+}
+.CVC p{
+    color: white;
+    font-family: 'Interstate';
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom:15px;
+    line-height: 50px;
+}
+
+.CVC button{
+    border: none;
+    background-color: #ff5629;
+    border-radius:100px ;
+    height: 41.5px;
+    width: 40%;
+    color: white;
+    font-family: 'Interstate Bold';
+    margin-bottom: 50px;
+    font-size: 13px;
+}
+
+.acessibilidade{
+    margin: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.acessibilidade h1{
+    margin-bottom: 30px;
+}
+
+.acessibilidade hr{
+    margin-bottom: 80px;
+}
+.acessibilidade p{
+    font-size: 22px;
+}
+
+.acessibilidade button{
+    border: none;
+    background-color: #ff5629;
+    border-radius:100px ;
+    height: 41.5px;
+    width: 40%;
+    color: white;
+    font-family: 'Interstate Bold';
+    margin-bottom: 50px;
+    font-size: 13px;
+}
+
+.duvidasFrequentes{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.duvidasFrequentes h1{
+    text-align: center;
+}
+
+.respostasFrequentes{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.respostasFrequentes .dropdown button{
+    color: #ff5629;
+    font-family: 'Interstate';
+    font-size: 22px;
+}
+
+.respostaDuvida{
+    font-size: 18px;
+    font-family: 'Interstate';
+}
+
+
+
+
+
+
+
+
+/* página para computador */
+
+
+@media screen and (min-width: 768px)  {
+    #form-rockinrio input[type="text"],input[type="email"]{
+        width: 90%;
+        min-width: 700px;
+    }
+
+    #form-rockinrio input[type="checkbox"]{
+        margin: 0;
+    }
+
+    .form-group{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .patrocinadores{
+        width: 100%;
+    }
+
+
+    .imgs .imagem{
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .rockinrioimagem{
+        width: 20%;
+    }
+
+    .redes{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .bloco-dias a{
+        width: 10%;
+    }
+
+    
+}
+
+
+
+
+
+
+.menuPC{
+    margin-bottom: 0 ;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Interstate Black';
+    font-style: italic;
+    list-style-type: none;
+}
+
+.menuPC a {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px; /* Espaço para o sublinhado */
+}
+
+.menuPC a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px; /* Altura da linha sublinhada */
+    width: 100%; /* Largura da linha para cobrir todo o texto */
+    background-color: red; /* Cor da linha */
+    border-radius: 5px; /* Arredondamento da borda */
+}
+
+.noticias{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.noticias img{
+    width: 24.49%;
+}
+
+  
