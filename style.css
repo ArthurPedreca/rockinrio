@@ -761,6 +761,12 @@ footer {
         text-align: center;
     }
 
+    .fundoingressos{
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
     .fundoinformações h1 {
         font-size: 6.5rem;
         margin-top: 300px;
