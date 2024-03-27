@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     if (getLimits.largura < 768) {
         sumir('menuPC')
         sumir('noticias')
-        sumir('')
+        sumir('teste')
     }
 
 
